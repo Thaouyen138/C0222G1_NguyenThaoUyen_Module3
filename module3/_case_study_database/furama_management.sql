@@ -21,11 +21,11 @@ CREATE TABLE bo_phan
 CREATE TABLE nhan_vien
 (
 	id_nhan_vien INT PRIMARY KEY AUTO_INCREMENT,
-    ho_va_ten VARCHAR(45),
-    ngay_sinh DATE,
-    so_cmnd VARCHAR(45),
-    luong DOUBLE,
-    so_dien_thoai VARCHAR(45),
+    ho_va_ten VARCHAR(45) NOT NULL,
+    ngay_sinh DATE NOT NULL,
+    so_cmnd VARCHAR(45) NOT NULL,
+    luong DOUBLE NOT NULL,
+    so_dien_thoai VARCHAR(45) NOT NULL,
     email VARCHAR(45),
     dia_chi VARCHAR(45),
 	id_vi_tri INT,
@@ -46,11 +46,11 @@ CREATE TABLE khach_hang
 	id_khach_hang INT PRIMARY KEY AUTO_INCREMENT,
 	id_loai_khach INT,
     FOREIGN KEY (id_loai_khach) REFERENCES loai_khach(id_loai_khach),
-	ho_va_ten VARCHAR(45),
-    ngay_sinh DATE,
-	gioi_tinh BIT DEFAULT 1,
-	so_cmnd VARCHAR(45),
-    so_dien_thoai VARCHAR(45),
+	ho_va_ten VARCHAR(45) NOT NULL,
+    ngay_sinh DATE NOT NULL,
+	gioi_tinh BIT DEFAULT 1 NOT NULL,
+	so_cmnd VARCHAR(45) NOT NULL,
+    so_dien_thoai VARCHAR(45) NOT NULL,
     email VARCHAR(45),
     dia_chi VARCHAR(45)
 );
@@ -58,9 +58,9 @@ CREATE TABLE khach_hang
 CREATE TABLE dich_vu_di_kem
 (
 	id_dich_vu_di_kem INT PRIMARY KEY AUTO_INCREMENT,
-	ten_dich_vu VARCHAR(45),
-	gia DOUBLE,
-	don_vi VARCHAR(45),
+	ten_dich_vu VARCHAR(45) NOT NULL,
+	gia DOUBLE NOT NULL,
+	don_vi VARCHAR(45) NOT NULL,
 	trang_thai VARCHAR(45)
 );
 CREATE TABLE kieu_thue
@@ -78,9 +78,9 @@ ten_loai_dich_vu VARCHAR(45)
 CREATE TABLE dich_vu
 (
 id_dich_vu INT PRIMARY KEY AUTO_INCREMENT,
-ten_dich_vu VARCHAR(45),
+ten_dich_vu VARCHAR(45) NOT NULL,
 dien_tich INT, 
-chi_phi_thue DOUBLE,
+chi_phi_thue DOUBLE NOT NULL,
 so_nguoi_toi_da INT,
 id_kieu_thue INT,
 FOREIGN KEY (id_kieu_thue) REFERENCES kieu_thue(id_kieu_thue),
@@ -95,9 +95,9 @@ so_tang INT
 CREATE TABLE hop_dong
 (
 id_hop_dong INT PRIMARY KEY AUTO_INCREMENT,
-ngay_lam_hop_dong DATETIME,
-ngay_ket_thuc DATETIME,
-tien_dat_coc DOUBLE,
+ngay_lam_hop_dong DATETIME NOT NULL,
+ngay_ket_thuc DATETIME NOT NULL,
+tien_dat_coc DOUBLE NOT NULL,
 id_nhan_vien INT, 
 id_khach_hang INT,
 id_dich_vu INT,
@@ -113,7 +113,7 @@ CREATE TABLE hop_dong_chi_tiet
     id_dich_vu_di_kem INT,
     FOREIGN KEY (id_hop_dong) REFERENCES hop_dong(id_hop_dong),
     FOREIGN KEY (id_dich_vu_di_kem) REFERENCES dich_vu_di_kem(id_dich_vu_di_kem),
-    so_luong INT
+    so_luong INT NOT NULL
 );
 
     
