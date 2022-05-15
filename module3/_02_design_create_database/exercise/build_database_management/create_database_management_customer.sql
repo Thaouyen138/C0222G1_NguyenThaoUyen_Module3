@@ -16,7 +16,7 @@ CREATE TABLE customer
     c_age int
 );
 
-CREATE TABLE order1
+CREATE TABLE `order`
 (
 	o_id INT NOT NULL  PRIMARY KEY AUTO_INCREMENT,
     c_id int ,
@@ -31,6 +31,6 @@ CREATE TABLE order_detail
     p_id INT,
     od_qty INT,
     PRIMARY KEY(o_id,p_id),
-    FOREIGN KEY(o_id)REFERENCES order1(o_id),
+    FOREIGN KEY(o_id)REFERENCES `order`(o_id),
     FOREIGN KEY(p_id)REFERENCES product(p_id)
 );
