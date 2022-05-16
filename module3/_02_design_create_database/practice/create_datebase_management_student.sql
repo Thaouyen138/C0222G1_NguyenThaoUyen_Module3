@@ -29,11 +29,10 @@ CREATE TABLE subjects (
 );
     
 CREATE TABLE mark(
-	mark_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    sub_id INT NOT NULL UNIQUE KEY,
-    student_id INT NOT NULL UNIQUE KEY,
+	mark_id INT AUTO_INCREMENT PRIMARY KEY,
+    sub_id INT ,
+    student_id INT,
     mark FLOAT DEFAULT"0",
-    CHECK(0<mark >100),
     exam_times TINYINT DEFAULT "1",
     FOREIGN KEY(sub_id) REFERENCES subjects(sub_id),
     FOREIGN KEY(student_id) REFERENCES student(student_id)

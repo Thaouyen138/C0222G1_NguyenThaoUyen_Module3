@@ -37,7 +37,7 @@ VALUES
 
 INSERT INTO khach_hang(id_khach_hang,id_loai_khach,ho_va_ten,ngay_sinh,gioi_tinh,so_cmnd,so_dien_thoai,email,dia_chi)
 values 
-(1,5,"Nguyễn Thị Hào","1970-11-07",0,"643431213","0945423362","thihao07@gmail.com","23 Nguyễn Hoàng,Đà Nẵng"),
+(1,4,"Nguyễn Thị Hào","1970-11-07",0,"643431213","0945423362","thihao07@gmail.com","23 Nguyễn Hoàng,Đà Nẵng"),
 (2,3,"Phạm Xuân Diệu","1992-08-08",1,"865342123","0954333333","xuandieu92@gmail.com","K77/22 Thái Phiên, Quảng Trị"),
 (3,1,"Trương Đình Nghệ","1990-02-27",1,"488645199","0373213122","nghenhan2702@gmail.com","K323/12 Ông Ích Khiêm, Vinh"),
 (4,1,"Dương Văn Quan","1981-07-08",1,"543432111","0490039241","duongquan@gmail.com","K453/12 Lê Lợi, Đà Nẵng"),
@@ -84,12 +84,12 @@ VALUES
 (12,	"2021-05-25","	2021-05-27",	0	,7,	10	,1);
 INSERT INTO dich_vu_di_kem
 VALUES
-(1,"	Karaoke",	10000	,"giờ	tiện nghi, hiện tại"),
-(2,"	Thuê xe máy",	10000	,"chiếc	hỏng 1 xe"),
-(3,"	Thuê xe đạp",	20000	,"chiếc	tốt"),
-(4,"	Buffet buổi sáng",	15000	,"suất	đầy đủ đồ ăn, tráng miệng"),
-(5,"	Buffet buổi trưa",	90000	,"suất	đầy đủ đồ ăn, tráng miệng"),
-(6,"Buffet buổi tối",	16000	,"suất	đầy đủ đồ ăn, tráng miệng");
+(1,"	Karaoke",	10000	,"giờ	","tiện nghi, hiện tại"),
+(2,"	Thuê xe máy",	10000	,"chiếc","	hỏng 1 xe"),
+(3,"	Thuê xe đạp",	20000	,"chiếc	","tốt"),
+(4,"	Buffet buổi sáng",	15000	,"suất	","đầy đủ đồ ăn, tráng miệng"),
+(5,"	Buffet buổi trưa",	90000	,"suất","	đầy đủ đồ ăn, tráng miệng"),
+(6,"Buffet buổi tối",	16000	,"suất	","đầy đủ đồ ăn, tráng miệng");
 
 INSERT INTO hop_dong_chi_tiet
 VALUES

@@ -90,7 +90,6 @@ tieu_chuan_phong VARCHAR(45),
 mo_ta_tien_nghi_khac VARCHAR(45),
 dien_dich_ho_boi DOUBLE,
 so_tang INT
-
 );
 CREATE TABLE hop_dong
 (
@@ -115,8 +114,15 @@ CREATE TABLE hop_dong_chi_tiet
     FOREIGN KEY (id_dich_vu_di_kem) REFERENCES dich_vu_di_kem(id_dich_vu_di_kem),
     so_luong INT NOT NULL
 );
-
-    
-
-    
-
+-- SELECT * FROM furama_management.vi_tri;
+-- SELECT * FROM furama_management.trinh_do;
+-- SELECT * FROM furama_management.bo_phan;
+-- SELECT * FROM furama_management.nhan_vien;
+-- SELECT * FROM furama_management.loai_khach;
+-- SELECT * FROM furama_management.khach_hang;
+-- SELECT * FROM furama_management.kieu_thue;
+-- SELECT * FROM furama_management.loai_dich_vu;
+-- SELECT * FROM furama_management.dich_vu_di_kem;
+-- SELECT * FROM furama_management.dich_vu;
+-- SELECT * FROM furama_management.hop_dong;
+-- SELECT * FROM furama_management.hop_dong_chi_tiet;
