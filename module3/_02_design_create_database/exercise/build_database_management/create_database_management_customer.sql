@@ -18,7 +18,7 @@ CREATE TABLE customer
 
 CREATE TABLE `order`
 (
-	o_id INT NOT NULL  PRIMARY KEY AUTO_INCREMENT,
+	o_id INT PRIMARY KEY AUTO_INCREMENT,
     c_id int ,
     o_date DATETIME,
     o_total_price DOUBLE,

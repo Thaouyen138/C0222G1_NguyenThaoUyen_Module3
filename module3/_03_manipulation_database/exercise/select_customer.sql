@@ -23,3 +23,17 @@ VALUE	(1, 1, 3),
 		(3, 1, 8),
 		(2, 5, 4),
 		(2, 3, 3);
+-- SELECT * FROM `order`;
+SELECT  `order`.c_id, customer.c_name, product.p_id, product.p_name  FROM order_detail
+JOIN `order` ON order_detail.o_id=`order`.o_id
+JOIN product ON product.p_id=order_detail.p_id
+JOIN customer ON `order`.c_id=customer.c_id;
+
+SELECT c_name, c_id FROM customer
+WHERE c_id NOT IN (SELECT c_id FROM `order`); 
+
+SELECT o.o_id, o.o_date, sum(od.od_qty * p.p_price) as tong_so_tien FROM `order` as o
+JOIN order_detail od ON o.o_id =od.o_id
+JOIN product p ON p.p_id=od.p_id
+GROUP BY o.c_id;
+
