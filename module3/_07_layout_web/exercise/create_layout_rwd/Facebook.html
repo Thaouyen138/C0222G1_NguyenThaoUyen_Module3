@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            height: 50px;
+            background-color:lightblue;
+            vertical-align: center;
+        }
+        #nav-left, #nav-right {
+            display: flex;
+            top: 5px;
+            width: 35%;
+            align-items: center;
+        }
+        nav #nav-left input {
+            position: relative;
+            width: 200px;
+            padding: 10px 10px 10px 10px;
+            border-radius: 30px;
+            background-color: blanchedalmond;
+            border: none;
+            left: 5px;
+        }
+        .spinner {
+            border: 6px solid rgba(0, 0, 0, .1);
+            border-left-color: cornflowerblue;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: auto;
+
+        }@keyframes spin {
+             0% {
+                 transform: rotate(0deg);
+             }
+
+             100% {
+                 transform: rotate(360deg);
+             }
+
+
+        }
+
+        #nav-right button {
+            border-radius: 30px;
+            height: 37px;
+            width: 37px;
+            margin-left: 8px;
+            border: none;
+            background-color: #EFEFEF;
+        }
+
+        aside {
+            width: 20%;
+            background-color: white;
+            cursor:pointer;
+            align-items: center;
+            float: left;
+        }
+
+        aside ul li {
+            list-style: none;
+            height: 30px;
+            font-family: "Arial";
+            font-size: 13px;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        aside ul li:hover {
+            color: #1876f2;
+            text-transform: uppercase;
+        }
+
+    </style>
+</head>
+<body>
+<nav>
+    <div id="nav-left">
+        <img src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/281468858_525426242458268_232608284102454937_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=D73EEq2NVNgAX_9DAPb&_nc_ht=scontent.fsgn5-10.fna&oh=00_AT8qFKBS8hft9SN9idUZo6RszhHZf2Ns92MY-o1uw9hfOw&oe=629127A4" width="40px">
+        <input type="text" placeholder="Tìm kiếm trên Facebook" size="15%">
+    </div>
+
+
+    <div id="nav-right">
+        <img
+                src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/281468858_525426242458268_232608284102454937_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=D73EEq2NVNgAX_9DAPb&_nc_ht=scontent.fsgn5-10.fna&oh=00_AT8qFKBS8hft9SN9idUZo6RszhHZf2Ns92MY-o1uw9hfOw&oe=629127A4"
+                width="25px"
+                style="padding-left: 40px">
+        <p style="font-family: Arial, sans-serif; font-size: 18px; margin-left: 7px; margin-right: 18px">Thảo Uyên</p>
+        <button>&boxplus;</button>
+        <button>&CupCap;</button>
+        <button>&Dcy;</button>
+        <button>&bigtriangledown;</button>
+    </div>
+</nav>
+<aside>
+    <ul>
+        <img style="height: 70px;width: 90px"
+             src="https://scontent.fsgn5-10.fna.fbcdn.net/v/t39.30808-6/281468858_525426242458268_232608284102454937_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=D73EEq2NVNgAX_9DAPb&_nc_ht=scontent.fsgn5-10.fna&oh=00_AT8qFKBS8hft9SN9idUZo6RszhHZf2Ns92MY-o1uw9hfOw&oe=629127A4">
+        <li style="padding-top: 15px">Thảo Uyên</li>
+        <li>Messenger</li>
+        <li>Bạn bè</li>
+        <li>Đã lưu</li>
+        <li>Nhóm</li>
+        <li>Marketplace</li>
+        <li>Watch</li>
+        <li>Kỷ niệm</li>
+        <li>Trang</li>
+    </ul>
+</aside>
+<div class="spinner"></div>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+body{
+    font-family: Arial;
+}
+footer {
+    padding: 5px;
+    color: white;
+    background-color: gray;
+}
+.ads{
+    margin-top: 5px;
+    border: 5px solid gainsboro;
+    text-align: center;
+    height: 20px;
+    line-height: 20px;
+    background-color: #CDCDCD;
+
+}
+/*#2{*/
+/*    weight: 30px;*/
+/*    height: 20px;*/
+/*    border: 10px solid gray;*/
+/*    background-color: darkgrey;*/
+/*}*/
+
+.col-l-1 {width: 8.33333%;}
+.col-l-2 {width: 16.66667%;}
+.col-l-3 {width: 25%;}
+.col-l-4 {width: 33.33333%;}
+.col-l-5 {width: 41.66667%;}
+.col-l-6 {width: 50%;}
+.col-l-7 {width: 58.33333%;}
+.col-l-8 {width: 66.66667%;}
+.col-l-9 {width: 75%;}
+.col-l-10 {width: 83.33333%;}
+.col-l-11 {width: 91.66667%;}
+.col-l-12 {width: 100%;}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/*footer p{*/
+/*    !*margin-right: 10%;*!*/
+/*    margin-left: 50%;*/
+/*}*/
+#menu2{
+    list-style: none;
+    position: relative;
+    height: 400px;
+    padding:0 20px;
+    line-height: 30px;
+    cursor:pointer;
+}
+#menu2 ul,#menu2 li{
+    color: blue;
+}
+#menu{
+    height: 30px;
+    padding:10px;
+    margin:10px;
+    background-color: #3e474e;
+    border: 1px solid black;
+
+}
+
+#menu ul, #menu li{
+    padding:0;
+    margin:0;
+    color: honeydew;
+
+}
+
+#menu li{
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 10px;
+    padding:0;
+}
+
+
+
