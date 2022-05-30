@@ -143,3 +143,9 @@ JOIN hop_dong hd ON nv.id_nhan_vien= hd.id_nhan_vien
 WHERE year(hd.ngay_lam_hop_dong) BETWEEN 2020 AND 2021
 GROUP BY id_nhan_vien
 HAVING count(hd.id_nhan_vien)  <=3;
+
+-- -----------------------------------------------------------------------------------------------------------------------------------------
+-- Task 16:	Xóa những Nhân viên chưa từng lập được hợp đồng nào từ năm 2019 đến năm 2021.
+
+DELETE FROM nhan_vien nv 
+WHERE nv.id_nhan_vien NOT IN(SELECT hd.id_nhan_vien FROM hop_dong hd WHERE year(hd.ngay_lam_hop_dong) BETWEEN 2019 and 2021);

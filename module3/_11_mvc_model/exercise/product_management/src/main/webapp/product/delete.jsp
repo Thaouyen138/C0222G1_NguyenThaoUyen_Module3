@@ -8,9 +8,40 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Delete product</title>
 </head>
 <body>
-$END$
+<h1>Delete product</h1>
+<p>
+    <a href="/product">Back to product list</a>
+</p>
+<form method="post">
+    <h3>Are you sure?</h3>
+    <fieldset>
+        <legend>product information</legend>
+        <table>
+            <tr>
+                <td>Name: </td>
+                <td>${requestScope["product"].getName()}</td>
+            </tr>
+            <tr>
+                <td>price: </td>
+                <td>${requestScope["product"].getPrice()}</td>
+            </tr>
+            <tr>
+                <td>describle: </td>
+                <td>${requestScope["product"].getDescrible()}</td>
+            </tr>
+            <tr>
+                <td>produce: </td>
+                <td>${requestScope["product"].getProduce()}</td>
+            </tr>
+            <tr>
+                <td><input type="submit" value="Delete produce"></td>
+                <td><a href="/product">Back to product list</a></td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
 </body>
 </html>

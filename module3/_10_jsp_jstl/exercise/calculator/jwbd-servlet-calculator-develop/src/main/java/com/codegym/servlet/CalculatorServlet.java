@@ -15,7 +15,7 @@ import java.io.PrintWriter;
 public class CalculatorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         float firstOperand = Integer.parseInt(request.getParameter("first-operand"));
-        float secondOperand = Integer.parseInt(request.getParameter("second-operand"));
+        float secondOperand = Integer.  parseInt(request.getParameter("second-operand"));
         char operator = request.getParameter("operator").charAt(0);
         PrintWriter writer = response.getWriter();
         writer.println("<html>");

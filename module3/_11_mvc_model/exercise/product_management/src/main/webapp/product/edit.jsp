@@ -8,9 +8,47 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>$Title$</title>
+    <title>Edit product</title>
 </head>
 <body>
-$END$
+<h1>Edit product</h1>
+<p>
+    <c:if test='${requestScope["message"] != null}'>
+        <span class="message">${requestScope["message"]}</span>
+    </c:if>
+</p>
+<p>
+    <a href="/product">Back to product list</a>
+</p>
+<form method="post">
+    <fieldset>
+        <legend>product information</legend>
+        <table>
+            <tr>
+                //id, tên sản phẩm, giá sản phẩm, mô tả của sản phẩm, nhà sản xuất.
+
+                <td>Name: </td>
+                <td><input type="text" name="name" id="name" value="${requestScope["product"].getName()}"></td>
+            </tr>
+            <tr>
+                <td>Price: </td>
+                <td><input type="text" name="price" id="price" value="${requestScope["product"].getPrice()}"></td>
+            </tr>
+            <tr>
+                <td>describle: </td>
+                <td><input type="text" name="describle" id="des" value="${requestScope["product"].getDescrible()}"></td>
+            </tr>
+            <tr>
+                <td>produce: </td>
+                <td><input type="text" name="produce" id="produce" value="${requestScope["product"].getProduce()}"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="submit" value="Update produce"></td>
+            </tr>
+        </table>
+    </fieldset>
+</form>
 </body>
+
 </html>
