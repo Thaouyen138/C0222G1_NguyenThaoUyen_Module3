@@ -5,11 +5,19 @@ import java.io.PrintWriter;
 @WebServlet(name = "ProductDiscountCalcutorServlet" ,urlPatterns = "/calculator")
 public class ProductDiscountCalcutorServlet extends javax.servlet.http.HttpServlet {
     protected void doPost(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
-            String description=request.getParameter("description");
-            float price=Float.parseFloat(request.getParameter("price"));
-            int discountPerson=Integer.parseInt(request.getParameter("discount"));
-            float discount=(float)(price * discountPerson*0.01);
-            float total=price-discount;
+        String description;
+        float price;
+        int discountPerson;
+        float discount;
+        float total;
+        try {
+            description  =request.getParameter("description");
+
+            price=Float.parseFloat(request.getParameter("price"));
+            discountPerson =Integer.parseInt(request.getParameter("discount"));
+            discount =(float)(price * discountPerson*0.01);
+            total  =price-discount;
+
         PrintWriter printWriter=response.getWriter();
         printWriter.println("<html>");
         printWriter.println("<h1> product description" +description);
@@ -18,6 +26,10 @@ public class ProductDiscountCalcutorServlet extends javax.servlet.http.HttpServl
         printWriter.println("<h1> product discount" +discount);
         printWriter.println("<h1> product total" +total);
         printWriter.println("<html>");
+        }catch (NumberFormatException e)
+        {
+            System.out.println("wrong format");
+        }
     }
 
     protected void doGet(javax.servlet.http.HttpServletRequest request, javax.servlet.http.HttpServletResponse response) throws javax.servlet.ServletException, IOException {
