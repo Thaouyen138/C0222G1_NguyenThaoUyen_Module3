@@ -1,0 +1,24 @@
+package service;
+
+import model.User;
+
+import java.util.List;
+
+public interface IUserServices {
+    public void insertUser(User user);
+
+    public void updateUser(User user);
+
+    public void deleteUser(int id);
+
+    public User selectUser(int id);
+
+    public List<User> selectAllUsers();
+
+    public List<User> searchByName(String name);
+
+    public List<User> searchByCountry(String country);
+
+    public List<User> orderByName();
+
+}
