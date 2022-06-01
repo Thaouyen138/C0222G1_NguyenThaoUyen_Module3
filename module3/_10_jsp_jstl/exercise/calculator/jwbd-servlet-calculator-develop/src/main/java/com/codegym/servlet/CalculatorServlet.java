@@ -14,22 +14,27 @@ import java.io.PrintWriter;
 @WebServlet(name = "CalculatorServlet", urlPatterns = "/calculate")
 public class CalculatorServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        float firstOperand = Integer.parseInt(request.getParameter("first-operand"));
-        float secondOperand = Integer.  parseInt(request.getParameter("second-operand"));
+        float first_operand = Float.parseFloat(request.getParameter("first_operand"));
+        float second_operand = Float.parseFloat(request.getParameter("second_operand"));
         char operator = request.getParameter("operator").charAt(0);
-        PrintWriter writer = response.getWriter();
-        writer.println("<html>");
-        writer.println("<h1>Result:</h1>");
-        try{
-            float result = Calculator.calculate(firstOperand, secondOperand, operator);
-            writer.println(firstOperand + " " + operator + " " + secondOperand + " = " + result);
-        }catch (Exception ex){
-            writer.println("Error: " + ex.getMessage());
-        }
-        writer.println("</html>");
-    }
+        String message = "";
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        Float result = 0.0f;
+
+        try {
+            result= Calculator.calculate(first_operand, second_operand, operator);
+        } catch (ArithmeticException e){
+            message = "Can't divide by zero";
+        }
+        catch (Exception e) {
+            message = "Can't operation";
+        }
+        request.setAttribute("first_operand",first_operand);
+        request.setAttribute("second_operand",second_operand);
+        request.setAttribute("operator",operator);
+        request.setAttribute("result",result);
+        request.setAttribute("message",message);
+        request.getRequestDispatcher("result.jsp").forward(request,response);
 
     }
 }
